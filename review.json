@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Ayesha Khan",
+    "location": "Mumbai",
+    "rating": 5,
+    "title": "Absolutely Stunning!",
+    "review": "Bought the gold plated necklace for my sister's wedding and got so many compliments. The quality is far better than the price suggests.",
+    "type": "large"
+  },
+  {
+    "name": "Priya Sharma",
+    "location": "Delhi",
+    "rating": 5,
+    "title": "Best Jewellery Brand Online",
+    "review": "I've ordered 4 times from zeneme now. Every single piece has been exactly like the photos — no surprises. The packaging is gorgeous too.",
+    "type": "large"
+  },
+  {
+    "name": "Neha Verma",
+    "location": "Bangalore",
+    "rating": 5,
+    "title": "Premium Quality at Great Price",
+    "review": "The American diamond earrings I ordered look incredibly real. My colleagues thought they were actual diamonds. Excellent craftsmanship.",
+    "type": "large"
+  },
+  {
+    "name": "Riya Patel",
+    "location": "Ahmedabad",
+    "rating": 4,
+    "title": "Perfect for Everyday Wear",
+    "review": "Light, comfortable and doesn't irritate my skin even after wearing all day. The gold plating hasn't faded after months of regular use.",
+    "type": "large"
+  },
+  {
+    "name": "Kavita Reddy",
+    "location": "Hyderabad",
+    "rating": 5,
+    "title": "Bridal Collection is Stunning",
+    "review": "Ordered the kundan set for my cousin's mehendi. Everyone at the function was asking where we got it from. Delivered well before the date too.",
+    "type": "large"
+  },
+  {
+    "name": "Simran Kaur",
+    "location": "Chandigarh",
+    "rating": 4.5,
+    "title": "Great Gift Option",
+    "review": "Gifted the pearl drop earrings to my mum for her birthday. She loved them! Came beautifully packed in a jewellery box.",
+    "type": "mid"
+  },
+  {
+    "name": "Meera Joshi",
+    "location": "Pune",
+    "rating": 5,
+    "title": "Elegant and Affordable",
+    "review": "Finally a brand that delivers exactly what they show. The oxidised silver jhumkas are my absolute favourite.",
+    "type": "mid"
+  },
+  {
+    "name": "Ananya Desai",
+    "location": "Surat",
+    "rating": 5,
+    "title": "Festival Ready",
+    "review": "Ordered for Navratri and Diwali — the polki bangles looked perfect with my chaniya choli. Will order every season.",
+    "type": "mid"
+  },
+  {
+    "name": "Shruti Iyer",
+    "location": "Kolkata",
+    "rating": 4,
+    "title": "Impressive Collection",
+    "review": "Wide variety to choose from. I spent an hour on the website just browsing. Everything looks so well curated.",
+    "type": "mid"
+  },
+  {
+    "name": "Pooja Hegde",
+    "location": "Chennai",
+    "rating": 5,
+    "title": "Smooth Finish, No Irritation",
+    "review": "I have sensitive skin and these are the only fashion jewellery pieces I can wear without any reaction. Very happy with the quality.",
+    "type": "mid"
+  },
+  {
+    "name": "Tanya Bhatia",
+    "location": "Gurgaon",
+    "rating": 4.5,
+    "title": "Looks Expensive, Isn't",
+    "review": "My office friends thought my necklace was real gold. zeneme really delivers luxury look at affordable prices.",
+    "type": "small"
+  },
+  {
+    "name": "Sakshi Nair",
+    "location": "Kochi",
+    "rating": 5,
+    "title": "Quick Delivery, Perfect Packing",
+    "review": "Ordered on Monday, received by Wednesday. Packed in a proper jewellery box. Perfect gifting experience.",
+    "type": "small"
+  },
+  {
+    "name": "Divya Agarwal",
+    "location": "Lucknow",
+    "rating": 4,
+    "title": "Trusted Brand",
+    "review": "Third order from zeneme and they've never disappointed. Consistent quality every single time.",
+    "type": "small"
+  },
+  {
+    "name": "Aditi Rao",
+    "location": "Indore",
+    "rating": 5,
+    "title": "My Go-To Jewellery Brand",
+    "review": "zeneme is the only brand I trust for fashion jewellery online. Never had a bad experience.",
+    "type": "very_small"
+  },
+  {
+    "name": "Geeta Singh",
+    "location": "Bhopal",
+    "rating": 5,
+    "title": "Traditional Meets Modern",
+    "review": "The meenakari ring is a perfect blend of classic craft and modern design. Wearing it every day.",
+    "type": "very_small"
+  }
+]

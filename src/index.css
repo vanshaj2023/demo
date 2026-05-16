@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+/* Override root gray-900 color variable if it's causing issues */
+:root {
+  --color-gray-900-override: #111827;
+  /* Muun Home Decor — primary red + burgundy accent */
+  --brand-primary: #db2a20;
+  --brand-primary-hover: #b8221a;
+  --brand-soft: rgba(219, 42, 32, 0.1);
+  --brand-soft-bg: rgba(219, 42, 32, 0.07);
+  --brand-border: rgba(219, 42, 32, 0.25);
+  --brand-accent: #b99b7b;
+  --brand-accent-soft: rgba(185, 155, 123, 0.14);
+  --brand-accent-muted: #ebe4dc;
+}
+
+/* Vertical scrollbar: transparent track, minimal thumb (Chrome, Safari, Edge) */
+html {
+  scrollbar-gutter: stable;
+}
+
+html,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.22);
+}
+
+/* Ensure images are not affected by gray-900 - more aggressive override */
+img {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+/* Specific override for customer review images */
+.customer-review-image-container,
+.customer-review-image-container * {
+  background-color: #f3f4f6 !important;
+  color: inherit !important;
+}
+
+.customer-review-image-container img {
+  background-color: transparent !important;
+  color: transparent !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Instagram embeds — compact cards (iframe scales with container) */
+.instagram-media,
+.instagram-media-rendered {
+  width: 100% !important;
+  max-width: 260px !important;
+  margin: 0 auto !important;
+  background: #000 !important;
+  border: 1px solid #dbdbdb !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+
+.instagram-media iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-height: 340px !important;
+}
+
+/* Ensure Instagram embed container has proper spacing */
+.instagram-embed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* Fade-in animation for reviews */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Override gray-900 for image containers to prevent black background */
+.customer-review-image-container {
+  background-color: #f3f4f6 !important; /* gray-100 */
+}
+
+.customer-review-image-container img {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Videos Section - Auto-scrolling Carousel */
+.videos-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.videos-carousel {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollVideos 8s linear infinite;
+  will-change: transform;
+  width: max-content;
+}
+
+/* Pause animation on hover or when user interacts */
+.videos-carousel-wrapper:hover .videos-carousel,
+.videos-carousel-wrapper.scrolling .videos-carousel {
+  animation-play-state: paused;
+}
+
+.video-panel {
+  flex-shrink: 0;
+  width: 280px;
+  height: 350px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-panel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play Button Overlay */
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.play-button-circle {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.video-panel:hover .play-button-circle {
+  transform: scale(1.1);
+}
+
+.play-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 3px; /* Slight offset for visual centering */
+}
+
+/* Video Modal */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.video-modal-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 10000;
+}
+
+.video-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-modal-player {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .video-modal-container {
+    max-width: 85%;
+    max-height: 85vh;
+  }
+
+  .video-modal-close {
+    top: -35px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .video-modal-player {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+@keyframes scrollVideos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
