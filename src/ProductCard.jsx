@@ -1,6 +1,61 @@
 import React from 'react';
 import './ProductCard.css';
 
+const PC_BADGES = [
+  {
+    label: 'Amazon',
+    rating: '4.5/5',
+    count: '980+',
+    logo: <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style={{ height: 11, width: 'auto', flexShrink: 0 }} />,
+  },
+  {
+    label: 'Nykaa',
+    rating: '4.6/5',
+    count: '900+',
+    logo: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMZ4VQq3AUwc6kAUXJM6eg2QCxmocOhXMvQQ&s" alt="Nykaa" style={{ height: 13, width: 'auto', flexShrink: 0 }} />,
+  },
+  {
+    label: 'Meesho',
+    rating: '4.4/5',
+    count: '850+',
+    logo: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Meesho_wordmark.svg/2560px-Meesho_wordmark.svg.png" alt="Meesho" style={{ height: 11, width: 'auto', flexShrink: 0 }} />,
+  },
+];
+
+function PcBadgeRotator() {
+  const [idx, setIdx] = React.useState(0);
+  const [phase, setPhase] = React.useState('idle');
+
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      setPhase('exit');
+      setTimeout(() => {
+        setIdx(i => (i + 1) % PC_BADGES.length);
+        setPhase('enter');
+        setTimeout(() => setPhase('idle'), 260);
+      }, 260);
+    }, 2800);
+    return () => clearInterval(id);
+  }, []);
+
+  const badge = PC_BADGES[idx];
+  const slideStyle = {
+    transition: 'transform 260ms cubic-bezier(0.4,0,0.2,1), opacity 260ms ease',
+    transform: phase === 'exit' ? 'translateX(-110%)' : phase === 'enter' ? 'translateX(110%)' : 'translateX(0)',
+    opacity: phase === 'idle' ? 1 : 0,
+  };
+
+  return (
+    <span className="pc-wom-rotator" aria-live="polite">
+      <span className="pc-wom-badge" style={slideStyle}>
+        {badge.logo}
+        <span className="pc-wom-badge-rating">{badge.rating}</span>
+        <span className="pc-wom-badge-count">({badge.count})</span>
+      </span>
+    </span>
+  );
+}
+
 const ProductCard = ({ product, onClick }) => {
   if (!product) return null;
 
@@ -12,6 +67,8 @@ const ProductCard = ({ product, onClick }) => {
     handle,
     imageAlt,
     soldOut = false,
+    rating,
+    reviewCount,
   } = product;
 
   const savePercent =
@@ -48,6 +105,16 @@ const ProductCard = ({ product, onClick }) => {
 
       <div className="pc-info">
         <h3 className="pc-title">{title}</h3>
+
+        {(rating || reviewCount) && (
+          <div className="pc-wom-row">
+            <span className="pc-wom-star">★</span>
+            {rating && <span className="pc-wom-rating">{Number(rating).toFixed(1)}</span>}
+            {reviewCount && <span className="pc-wom-reviews">| {reviewCount} Reviews</span>}
+            <span className="pc-wom-divider">·</span>
+            <PcBadgeRotator />
+          </div>
+        )}
 
         <div className="pc-price-row">
           {currentPrice && (

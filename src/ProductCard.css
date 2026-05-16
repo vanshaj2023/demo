@@ -69,6 +69,69 @@
   min-height: 2.7em;
 }
 
+/* ── WOM row ── */
+.pc-wom-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.pc-wom-star {
+  color: #f59e0b;
+  font-size: 12px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.pc-wom-rating {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  flex-shrink: 0;
+}
+
+.pc-wom-reviews {
+  font-size: 10px;
+  color: #6b7280;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  flex-shrink: 0;
+}
+
+.pc-wom-divider {
+  font-size: 10px;
+  color: #d1d5db;
+  flex-shrink: 0;
+}
+
+.pc-wom-rotator {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.pc-wom-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pc-wom-badge-rating {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pc-wom-badge-count {
+  font-size: 10px;
+  color: #6b7280;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 /* ── Price row ── */
 .pc-price-row {
   display: flex;
