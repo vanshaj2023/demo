@@ -24,9 +24,25 @@ import {
 import reviewData from '../review.json';
 import { INSTAGRAM_POST_URLS } from './instagramPosts';
 
-/** Review images — use gallery images */
-const PRODUCT_REVIEW_IMAGES = GALLERY_IMAGES;
-const BRAND_REVIEW_IMAGES = [...GALLERY_IMAGES].reverse();
+/** Review images — sourced from /public/images/gallery (customer-submitted) */
+const CUSTOMER_REVIEW_GALLERY = [
+  '/images/gallery/image.png',
+  '/images/gallery/image copy.png',
+  '/images/gallery/image copy 2.png',
+  '/images/gallery/image copy 3.png',
+  '/images/gallery/image copy 4.png',
+  '/images/gallery/image copy 5.png',
+  '/images/gallery/image copy 6.png',
+  '/images/gallery/image copy 7.png',
+  '/images/gallery/image copy 8.png',
+  '/images/gallery/image copy 9.png',
+  '/images/gallery/image copy 10.png',
+  '/images/gallery/image copy 11.png',
+  '/images/gallery/image copy 12.png',
+].map(encodeURI);
+
+const PRODUCT_REVIEW_IMAGES = CUSTOMER_REVIEW_GALLERY;
+const BRAND_REVIEW_IMAGES = [...CUSTOMER_REVIEW_GALLERY].reverse();
 
 function getReviewTitle(text) {
   const first = text.split(/[.!,]/)[0].trim();

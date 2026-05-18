@@ -4,7 +4,7 @@ import './AIBrandEngine.css';
 const SHOP_URL = 'https://www.instagram.com/zeneme_jewellery/';
 const INSTAGRAM_URL = 'https://www.instagram.com/zeneme_jewellery/';
 
-/** Sparkle mark — Muun Home navy accent */
+/** Sparkle mark — zeneme gold accent */
 function PremiumAIIcon({ gradientId, className, style, size = 40 }) {
   return (
     <svg
@@ -130,29 +130,29 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
 
   const brandInfo = {
     craft: {
-      title: 'Home decor craftsmanship',
+      title: 'Jewellery craftsmanship',
       iconType: 'craft',
       content: [
         {
-          label: 'Stable structure',
-          value: 'Holds its form',
-          description: 'Reinforced structure keeps the piece steady — from everyday corners to statement set-ups.',
+          label: 'Anti-tarnish plating',
+          value: 'Long-lasting shine',
+          description: 'Premium anti-tarnish coating keeps every piece looking new — wear after wear, season after season.',
         },
         {
-          label: 'Detailing & finishes',
-          value: 'Refined & durable',
-          description: 'Matte-tone detailing and refined closures—built for smooth everyday use.',
+          label: 'Secure clasps & closures',
+          value: 'Snag-free wear',
+          description: 'Smooth-action clasps and reinforced jump rings — built to stay put through busy days.',
         },
         {
-          label: 'Surface & finish',
+          label: 'Stone setting & finish',
           value: 'Hand-finished',
-          description: 'Clean edges, no loose details, and finishes chosen to resist everyday marks.',
+          description: 'Each stone is hand-set, every edge polished — no rough spots, no loose stones.',
         },
       ],
       highlights: [
-        'Surfaces and compartments designed for everyday essentials.',
-        'Designed detailing that blends with your styling choices.',
-        'Every piece passes a finish check before it leaves our studio.',
+        'Hypoallergenic, skin-friendly metals safe for sensitive skin.',
+        'Detailing inspired by classic Indian motifs with a modern edge.',
+        'Every piece passes a QC check before it leaves our studio.',
       ],
     },
     occasions: {
@@ -160,25 +160,25 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
       iconType: 'occasions',
       content: [
         {
-          label: 'Daily spaces',
-          value: 'Room-ready',
-          description: 'Thoughtfully proportioned for living spaces—functional and polished in every room.',
+          label: 'Daily wear',
+          value: 'Office-ready',
+          description: 'Lightweight, low-profile pieces designed to layer with your everyday looks — work to weekend.',
         },
         {
-          label: 'Weekend styling',
-          value: 'Day to evening',
-          description: 'Built for re-styling—easy to move and reposition as your home changes.',
+          label: 'Evening styling',
+          value: 'Day to night',
+          description: 'Statement earrings and stackable rings that take your fit from desk to dinner.',
         },
         {
-          label: 'Hosting & gifting',
-          value: 'Everyday to celebratory',
-          description: 'Pieces that transition from daily comfort to special occasions.',
+          label: 'Festive & bridal',
+          value: 'Celebration-ready',
+          description: 'Heritage-inspired sets for sangeets, weddings, Diwali — bold without being heavy.',
         },
       ],
       highlights: [
-        'Designs that keep spaces feeling fresh and inviting all day.',
-        'Durable build tested for everyday use and long-lasting performance.',
-        'Smart proportions for real life—beautiful even in small spaces.',
+        'Designs that pair effortlessly with ethnic and western fits.',
+        'Featherlight earrings tested for all-day comfort — no ear fatigue.',
+        'Stackable, layerable pieces that grow with your collection.',
       ],
     },
     gifting: {
@@ -188,49 +188,49 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
         {
           label: 'Who it is for',
           value: 'Her · them',
-          description: 'Sister, friend, mum, colleague — a Muun Home piece is a gift that gets used every single day.',
+          description: 'Sister, friend, mum, partner — a zeneme piece is a gift she will reach for every single week.',
         },
         {
           label: 'Occasions',
           value: 'Every milestone',
-          description: 'Birthdays, promotions, anniversaries, Diwali, housewarming, and "just because" surprises.',
+          description: 'Birthdays, anniversaries, Karwa Chauth, Raksha Bandhan, Diwali, and "just because" surprises.',
         },
         {
           label: 'Presentation',
           value: 'Gift-ready',
-          description: 'Premium wrapping and care notes included — no extra effort needed.',
+          description: 'Premium jewellery box and care card included — no extra wrapping needed.',
         },
       ],
       highlights: [
-        'Recipients consistently say the piece looks far more elevated than it is.',
-        'Care wrap and wrapping included so it arrives feeling like a considered gift.',
-        'Available in colours — Beige, Brown, Teal — easy to match personal style.',
+        'Recipients consistently say the piece looks far more premium than its price.',
+        'Boxed and ribbon-tied so it arrives feeling like a considered gift.',
+        'Available in gold, rose gold, and silver tones — easy to match her style.',
       ],
     },
     care: {
-      title: 'Care for your Muun Home decor',
+      title: 'Care for your zeneme jewellery',
       iconType: 'care',
       content: [
         {
-          label: 'Upholstery & surfaces',
-          value: 'Wipe clean',
-          description: 'Use a soft damp cloth for surface marks. Avoid soaking and harsh cleaning.',
+          label: 'Daily handling',
+          value: 'Last on, first off',
+          description: 'Wear jewellery after perfume, makeup and lotion. Remove before showering, swimming or sleeping.',
         },
         {
-          label: 'Wood & glass surfaces',
-          value: 'Easy wipe-down',
-          description: 'Use a soft damp cloth. Avoid abrasive cleaners to protect finishes.',
+          label: 'Cleaning routine',
+          value: 'Soft cloth wipe',
+          description: 'Wipe gently with a soft dry cloth after each wear. Avoid water, sweat and harsh chemicals.',
         },
         {
-          label: 'Placement & storage',
-          value: 'Style & store',
-          description: 'Store with soft padding so surfaces and finishes stay perfect between uses.',
+          label: 'Storage',
+          value: 'Pouch & box',
+          description: 'Store each piece separately in the pouch provided to prevent scratches and tangling.',
         },
       ],
       highlights: [
-        'Store pieces level/ upright and away from direct sunlight to preserve colour.',
-        'For tabletop areas, wipe after use to keep surfaces looking fresh.',
-        'Finishes stay polished when you avoid harsh chemicals.',
+        'Keep away from perfume, sanitiser and chlorine to preserve plating.',
+        'Re-wear within 1–2 weeks — frequent wear actually prevents tarnish build-up.',
+        'Plating stays vibrant for 6–12 months with proper care.',
       ],
     },
     shipping: {
@@ -254,9 +254,9 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
         },
       ],
       highlights: [
-        'Pieces are packed with protective padding — no dents or deformation on arrival.',
-        'Protective corners and surfaces are checked before dispatch.',
-        'Free or promotional shipping often available — check cart for current offers.',
+        'Each piece is packed in a velvet pouch and rigid box — arrives gift-ready.',
+        'Tamper-proof packaging and quality check before dispatch.',
+        'Free shipping often available on prepaid orders — check cart for current offers.',
       ],
     },
     brand: {
@@ -266,12 +266,12 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
         {
           label: 'Brand promise',
           value: 'Style more, worry less',
-          description: 'Decor designed for how Indian homes actually live — everyday rooms, hosting days, family moments, and everything between.',
+          description: 'Anti-tarnish, hypoallergenic jewellery designed for how Indian women actually live — work, weekends, weddings, and everything between.',
         },
         {
           label: 'Shop',
           value: 'zeneme',
-          description: 'Decor accents, statement pieces, and styling essentials — curated for warm, modern Indian homes.',
+          description: 'Earrings, necklaces, rings, and statement sets — curated for the modern Indian wardrobe.',
         },
         {
           label: 'Community',
@@ -281,20 +281,20 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
       ],
       highlights: [
         'Trusted by 10K+ buyers on Amazon with consistently high ratings.',
-        'Products designed around what Indian hosts and everyday creators actually need.',
-        'When in doubt — choose a balanced statement base for everyday hosting.',
+        'Pieces designed around what Indian women wear day to day, not just for occasions.',
+        'When in doubt — start with a pair of stud earrings and a delicate chain.',
       ],
     },
   };
 
   const graphData = {
     fit: {
-      label: 'Everyday styling comfort',
+      label: 'All-day wear comfort',
       data: [85, 88, 86, 90, 87, 91, 93],
       color: '#B99B7B',
     },
     positive: {
-      label: 'Quality satisfaction',
+      label: 'Quality & finish satisfaction',
       data: [78, 82, 84, 87, 85, 88, 91],
       color: '#c9aa8f',
     },
@@ -323,7 +323,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
   const metrics = [
     { id: 'positive', label: 'Quality' },
     { id: 'repeat', label: 'Repeat' },
-    { id: 'fit', label: 'Style' },
+    { id: 'fit', label: 'Comfort' },
     { id: 'delivery', label: 'Ship' },
     { id: 'rating', label: 'Stars' },
     { id: 'issue', label: 'Support' },
@@ -426,7 +426,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
           ))}
         </div>
         <p className="chart-footnote">
-          Illustrative trend only — not live data. Themes: everyday styling, home hosting, and gifting satisfaction.
+          Illustrative trend only — not live data. Themes: everyday wear, festive styling, and gifting satisfaction.
         </p>
       </div>
     );
@@ -463,7 +463,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
             </div>
             {!compact && (
               <div className="trigger-text">
-                <span className="trigger-label">Home decor insights</span>
+                <span className="trigger-label">Jewellery insights</span>
                 <span className="trigger-sublabel">zeneme</span>
               </div>
             )}
@@ -471,7 +471,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
           </button>
           {!compact && (
             <div className="ai-brand-engine-tooltip" role="note">
-              Decor trends, styling & gifting — tap to explore
+              Jewellery trends, styling & gifting — tap to explore
               <span className="ai-brand-engine-tooltip__arrow" aria-hidden />
             </div>
           )}
@@ -485,7 +485,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
               </div>
               <div>
                 <h3 className="panel-title">AI Brand Engine</h3>
-                <p className="panel-subtitle">Home decor · styling · everyday spaces</p>
+                <p className="panel-subtitle">Jewellery · styling · everyday wear</p>
               </div>
             </div>
             <button type="button" className="panel-close-btn" onClick={() => setIsExpanded(false)} aria-label="Close">
@@ -544,7 +544,7 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
                 </div>
                 <div className="panel-content-cta">
                   <a href={SHOP_URL} target="_blank" rel="noopener noreferrer" className="abe-cta abe-cta--primary">
-                    Shop Muun Home
+                    Shop zeneme
                   </a>
                   <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="abe-cta abe-cta--ghost">
                     Instagram
@@ -559,10 +559,10 @@ function AIBrandEngine({ showExtras = true, compact = false }) {
               <span className="footer-badge-icon" aria-hidden>
                 <PremiumAIIcon gradientId={`${baseId}-foot`} size={18} />
               </span>
-              <span>Curated for home decor, styling & gifting</span>
+              <span>Curated for jewellery, styling & gifting</span>
             </div>
             <p className="footer-note">
-              For home styling and gifting — summaries are for inspiration only. Check product pages and policies on instagram.com/zeneme_jewellery before you buy.
+              For everyday wear, festive looks and gifting — summaries are for inspiration only. Check product pages and policies on instagram.com/zeneme_jewellery before you buy.
             </p>
           </div>
         </div>
