@@ -667,6 +667,17 @@ const ShopifyProductPage = ({ product: passedProduct, onHomeClick }) => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 relative">
 
+      {/* Fixed back button — top left, always visible */}
+      <button
+        type="button"
+        onClick={onHomeClick}
+        className="fixed top-4 left-4 z-50 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1.5 text-sm text-gray-700 shadow-md transition-all hover:bg-white hover:text-gray-900 hover:shadow-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back
+      </button>
 
       {/* Product Page Header Banner — full width (no max-width) */}
       <div className="w-full bg-white">
